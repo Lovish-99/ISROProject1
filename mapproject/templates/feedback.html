@@ -1,0 +1,12 @@
+{% extends 'navbar.html' %}
+{% block content %}
+
+    <div style="margin-top: 10px;">
+        <form action="{% url 'feedback' %}" method="post">
+            {% csrf_token %}
+            <input placeholder="{{ status|safe }}" style="border: solid 1px black; border-radius: 1px; text-decoration: none;height: 30px;width: 250px;">
+            <input type="submit" value="Status" class="btn info" style="border: 2px solid black;height: 30px; border-radius: 8px;text-decoration: none; background-color: white;border-color: #2196F3;color: dodgerblue; width: 120px;text-align: center;">
+        </form>
+    </div>
+    
+{% endblock %}
